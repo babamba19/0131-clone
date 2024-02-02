@@ -17,6 +17,9 @@ img {
 html {
   font-size: 16px;
 }
+html.active{
+  overflow: hidden;
+}
 body {
   font-family: "Pretendard", sans-serif;
   font-size: 16px;
@@ -27,6 +30,14 @@ body {
   word-break: keep-all;
   background-color: aqua;
   height: 2000px;
+}
+/* 공통 클래스 */
+.inner{
+  display: block;
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  background-color: chartreuse;
 }
 /* 전체 레이아웃 */
 .wrap {
@@ -122,6 +133,9 @@ transition: all 0.5s;
   cursor: pointer;
 
 }
+.mbt.active span{
+  background-color: #222;
+}
 .mbt span{
   position: absolute;
   left: 0;
@@ -136,7 +150,7 @@ transition: all 0.5s;
   transform-origin: 0 50%;
   transition: all 0.3s;
 }
-.mbt:hover span:nth-child(1){
+.mbt.ani span:nth-child(1){
 
   transform: rotate(45deg);
   
@@ -145,16 +159,17 @@ transition: all 0.5s;
   top:50%;
 
 }
-.mbt:hover span:nth-child(2){
+.mbt.ani span:nth-child(2){
  opacity: 0;
 }
 .mbt span:nth-child(3){
  top: 100%;
  transform-origin: 0 50%;
+ transition: all 0.3s;
 }
-.mbt:hover span:nth-child(3){
+.mbt.ani span:nth-child(3){
   transform: rotate(-45deg);
-  transition: all 0.3s;
+  
  }
  /* 모바일 gnb */
 .nav-mb{
@@ -180,4 +195,35 @@ transition: all 0.5s;
   font-size: 24px;
   color: #222;
   border-bottom: 1px solid #e5e5e5;
+}
+/* 비주얼 */
+.visual{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+.visual-box{
+  width: 100%;
+  height: 100%;
+}
+.visual-bg-1{
+  background: url("../images/main_visual_1.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-bg-2 {
+  background: url("../images/main_visual_2.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-bg-3 {
+  background: url("../images/main_visual_3.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-bg-4 {
+  background: url("../images/main_visual_4.jpg") no-repeat center;
+  background-size: cover;
 }
