@@ -60,5 +60,9 @@ window.onload = function () {
       // 이것을 방지해 주기위한 처리
       disableOnInteraction: false,
     },
+    navigation: {
+      nextEl: ".sw-visual-next",
+      prevEl: ".sw-visual-prev",
+    },
     })
   };
